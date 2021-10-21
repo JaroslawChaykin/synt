@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require vars
+ *= require basics
+ *= require_tree ./control_components
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #e3e4e8;
+    --fg: #17181c;
+    --transDur: 0.1s;
+    font-size: calc(20px + (40 - 20)*(100vw - 320px)/(2560 - 320));
+}
+body {
+    font-family: sans-serif;
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.note {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 64px;
+    width: 64px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3775dd;
+    box-shadow: 0 2px #21487f;
+    cursor: pointer;
+}
+
+.note:hover {
+    background-color: #002fed;
+    box-shadow: 0 2px #001331;
+}
+#play-button {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 64px;
+    width: calc(100% - 20px);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3775dd;
+    box-shadow: 0 2px #21487f;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.note-is-active {
+    background: #fc0057;
+    box-shadow: 0 2px #8c002f;
+}
